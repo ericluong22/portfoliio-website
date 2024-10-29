@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Luong</title>
+    <link rel="stylesheet" href="spotify.css">
+    <link rel="stylesheet" href="media.css">
+    <script src="https://kit.fontawesome.com/232c0321fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo"><a href="home.html">Eric Luong</a></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#Resume" onclick="window.open('./assets/Resume copy.pdf')">Resume</a></li>
+                <i class="fa-brands fa-linkedin"
+                alt="My LinkedIn Profle"
+                onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')">
+                </i>  
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Eric Luong</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#Home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#About" onclick="toggleMenu()">About</a></li>
+                <li><a href="#Resume" onclick="window.open('./assets/Resume copy.pdf')">Resume</a></li>
+                <li><a href="#LinkedIn" onclick="location.href='https://www.linkedin.com/in/ericluongg'">LinkedIn</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="begin">
+        <div class="intro">
+            <p class="work-title">Spotify Statistics Page</p>
+            <div class="preview-container">
+                <img  class="preview-pic" src="./assets/preview-pic-spotify.png" alt="spotify preview">
+            </div>
+            <div class="tags">
+                <p class="role"><span style="font-weight: 600;">Role:</span> Product Designer</p>
+                <p class="timeline"><span style="font-weight: 600;">Timeline:</span> July 2024</p>
+                <p class="duration"><span style="font-weight: 600;">Duration:</span> 4 Weeks</p>
+            </div>
+        </div>
+    </section>
+    <section id="overview">
+        <div class="overview">
+            <p class="overview-t">Overview</p>
+            <p class="overview-p">This was my first time ever doing a case study. This was a solo project and I did all of the research, wireframing, prototyping, and story telling myself.</p>
+        </div>
+    </section>
+    <section id="context">
+        <div class="context">
+            <p class="context-0">Context</p>
+            <p class="context-1">Spotify is an audio streaming platform where artists are given the freedom and opportunity to showcase their art to billions of people and fans the ability to enjoy their art.</p>
+            <p class="context-2">I was inspired to do this case study because as a long time Spotify user, one of the main gripes I have with it is the lack of stats that are unavailable to the user. This was brought to my attention with Spotify Wrapped, an annual feature that provides users at the end of the year where they showcase them a personalized summary of their listening history and habits of that year. This brought to my attention that if Spotify has collected all this different type of data on the user, why is there not a page where users can look at this type of data throughout the year?</p>
+        </div>
+    </section>
+    <section id="problem-solution">
+        <div class="problem">
+            <p class="problem-1">The Problem</p>
+            <div class="problem-list">
+                <ol>
+                    <li>Lack of year-round access to personal listening statistics</li>
+                    <li>Unable to see their past statistics and listening data</li>
+                    <li>Missed opportunity for more engagement on their platform</li>
+                </ol>
+            </div>       
+        </div>
+        <div class="solution">
+            <p class="solution-1">The Solution</p>
+            <div class="solution-list">
+                <ol>
+                    <li>Create a page where users would be able to view and interact with their personal listening history and data</li>
+                    <li>Have an interactive interface where users would be able to select if they want to expand on a certain statistic on the page or choose the timetable they want for that statistic</li>
+                    <li>Give users continuous access to their personal listening data year-round</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <section id="research">
+        <p class="research-0">Research</p>
+        <p class="research-1">I moved on to conducting user interviews for my solution. I interviewed 3 people asking them about their opinions on Spotify and what they would like to see in a statistics page. </p>
+        <div class="andrew-alan">
+            <img class="andrew-pic" src="./assets/andrew-interiew.png" alt="andrew pic">
+            <img class="alan-pic" src="./assets/alan-interview.png" alt="alan pic">
+        </div>
+        <div class="kelly">
+            <img class="kelly-pic" src="./assets/kelly-interview.png" alt="kelly pic">
+        </div>
+        <p class="research-2">I was then able to find the key pain points my interviewees had and I was then able to create an affinity diagram based off of it.</p>
+        <div class="affinity">
+            <img class="affinity-diagram" src="./assets/affinity-diagram.png" alt="affinity diagram">
+        </div>
+        <p class="research-3">Through this I was able to create a user persona to help better visualize the audience I am designing this feature for. I created this user persona because I felt like people like John Lee would benefit from and enjoy the new statistics page.</p>
+        <div class="user-persona">
+            <img class="user" src="./assets/user-person.png" alt="user persona">
+        </div>
+    </section>
+    <section id="early-ideation">
+        <p class="early-1">Early Ideation</p>
+        <p class="early-2">I started off my design process by sketching out the layouts of the pages I wanted to create. This was to give me some ideas to bounce off of myself and a base to start on.</p>
+        <div class="slide-0">
+            <img class="image-0" src="./assets/sketch.png" alt="sketch">
+        </div>
+        <p class="early-3">I then went ahead and started to wireframe my designs. I created the whole process of how the user would be able interact with the entire statistics page I was creating.</p>
+        <p class="early-4">I started off with designing the steps on how the user would access the statistics page. I made it another option in the dropdown menu when users clicked on their profile picture. I think this makes it very easy to access for the user.</p>
+        <div class="slide-1">
+            <img class="image-1" src="./assets/wireframe-1.png" alt="wireframe 1">
+        </div>
+        <p class="early-5">The first statistic I chose to do was the minutes listened graph. I chose to do a bar graph to display the information because I felt like it was an easy way for the users to see this statistic visualized and make it very easy to compare with other times as well.</p>
+        <div class="slide-2">    
+            <img class="image-2" src="./assets/wireframe-2.png" alt="wireframe 2">
+        </div>
+        <p class="early-6">I then went on to design the other 3 statistics I wanted to showcase on this statistics page. I formatted them similar to how Spotify had already displayed the top artists they already have on their platform. I decided to add more details for each statistic so the user can have more insight over their listening history. They all have similar layouts to continue design continuity for the user to easily navigate through. On the left are how the statistics would like on the main statistics page. On the right are how they would look if the user clicked on show all.</p>
+        <p class="top-1">Top Artists Page</p>
+        <div class="slide-3">
+            <img class="image-3" src="./assets/wireframe-3.png" alt="wireframe 3">
+        </div>
+        <p class="top-2">Top Tracks Page</p>
+        <div class="slide-4">
+            <img class="image-4" src="./assets/wireframe-4.png" alt="wireframe 4">
+        </div>
+        <p class="top-3">Top Genres Page</p>
+        <div class="slide-5">
+            <img class="image-5" src="./assets/wireframe-5.png" alt="wireframe 5">
+        </div>
+    </section>
+    <section id="final-design">
+        <p class="letter-0">Final Design</p>
+        <p class="letter-1">How To Get To Statistics Page</p>
+        <div class="design-1">
+            <img class="final-1" src="./assets/final-1.png" alt="final 1">
+        </div>
+        <p class="letter-2">Minutes Listened Page</p>
+        <div class="design-2">
+            <img class="final-2" src="./assets/final-2.png" alt="final 2">
+        </div>
+        <p class="letter-3">Top Artists Page</p>
+        <div class="design-3">
+            <img class="final-3" src="./assets/final-3.png" alt="final 3">
+        </div>
+        <p class="letter-4">Top Tracks Page</p>
+        <div class="design-4">
+            <img class="final-4" src="./assets/final-4.png" alt="final 4">
+        </div>
+        <p class="letter-5">Top Genres Page</p>
+        <div class="design-5">
+            <img class="final-5" src="./assets/final-5.png" alt="final 5">
+        </div>
+    </section>
+    <section id="takeaways">
+        <p class="take-0">Takeaways</p>
+        <p class="take-1">This is the first case study I had ever done and I have learned so much from doing this. I decided on doing a Spotify Statistics page because it had been something that I have wanted on the platform since I started using many years ago. I think that when entering the beginning stages of this case study I did not realize how important it was to get the planning part of the process right. Steps like establishing a problem and a goal, creating a vision statement, and doing user research helps build a platform for you to go ahead and create wireframes and final designs.</p>
+        <p class="take-2">I think that through this case study I have become so much more familiar with Figma and how to use it. I learned how to format a case study and realized that every part of the process has a meaning to it and they all bounce off of each other to create a story.</p>
+        <p class="take-3">The things I would do differently would be putting more effort into wireframing and sketching before worrying about the final designs and what the colors should be on the background of the statistics page or if I should make this text bold or not. The most important and fundamental parts of a design is having a good user friendly interface balanced with aesthetics.</p>
+    </section>
+    <section id="footer">
+        <div class="footer-">
+            <p class="footer_1">Eric Luong</p>
+            <p class="footer_2">Feel free to reach out at anytime!</p>
+            <div class="bottom-row">
+                <div class="the-logos">
+                    <i class="fa-brands fa-linkedin" onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')"></i> <a href="mailto:eluong1@vols.utk.edu" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <p class="footer_3">Designed and built by Eric Luong <i class="fa-regular fa-copyright"></i> 2024</p>
+            </div>
+        </div>
+    </section>
+</body>

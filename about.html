@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Luong</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="media.css">
+    <script src="https://kit.fontawesome.com/232c0321fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo"><a href="home.html">Eric Luong</a></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#Resume" onclick="window.open('./assets/Resume copy.pdf')">Resume</a></li>
+                <i class="fa-brands fa-linkedin"
+                alt="My LinkedIn Profle"
+                onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')">
+                </i>  
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Eric Luong</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#Home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#About" onclick="toggleMenu()">About</a></li>
+                <li><a href="#Resume" onclick="window.open('./assets/Resume copy.pdf')">Resume</a></li>
+                <li><a href="#LinkedIn" onclick="location.href='https://www.linkedin.com/in/ericluongg'">LinkedIn</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="introduction">
+        <div class="bio">
+            <div class="nice">
+                <p>Hello, it is nice to meet you!</p>
+            </div>
+            <div class="little-about">
+                <p class="about-me">A little about me</p>
+                <p class="about-p">My name is  Eric Luong. I am currently a third year undergraduate at the University of Tennessee Knoxville majoring in Information Sciences with a concentration in User-Experience Design. I am really passionate about using my own creative expression to come up with solutions in product design. I love connecting and learning from people so please do not be afraid to reach out!</p>
+            </div>
+            <div class="my-journey">
+                <p class="journey">My journey</p>
+                <p class="sport">I first entered UTK as a sport management but later switched to UXD about a year in because I wanted to do something different. A lot of the people around me are in computer science so they introduced me to UXD and I instantly fell in love with it. Growing up I always felt assimilated with art and design. I am really into fashion so this felt like a nice way bridge the gap between both sides. </p>
+                <p class="designer">I am currently a designer at Hack4Impact. I am working with non-profits by designing applications and websites to help push their mission for social change.</p>
+            </div>
+        </div>
+        <div class="my-hobbies">
+            <div class="hobbies">
+                <p>My Hobbies!</p>
+            </div>
+            <div class="soccer-fashion-anime">
+                <div class="soccer">
+                    <p class="soccer-">Soccer</p>
+                    <p class="soccer-p">I have been obsessed with soccer since my childhood. I played growing up and I am a Chelsea fan!</p>
+                </div>
+                <div class="fashion">
+                    <p class="fashion-">Fashion</p>
+                    <p class="fashion-p">I am also really into fashion! I am really into Japanese fashion at this moment.</p>
+                </div>
+                <div class="anime">
+                    <p class="anime-manga">Anime/Manga</p>
+                    <p class="anime-p">I am a big anime/manga nerd. My favorites are One Piece, Haikyu, and Vinland Saga!</p>
+                </div>
+            </div>
+            <div class="gaming-music">
+                <div class="gaming">
+                    <p class="gaming-">Gaming</p>
+                    <p class="gaming-p">I am really into gaming. The game I am playing the most right now is Overwatch 2. My favorite game of all time is Elden Ring!</p>
+                </div>
+                <div class="music">
+                    <p class="music-">Music</p>
+                    <p class="music-p">I love listening to music. I love sharing music even more! I am currently really into Korean and Japanese music. My favorite artists are Wave to Earth, Colde, and Mei Ehara. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="footer-">
+            <p class="footer_1">Eric Luong</p>
+            <p class="footer_2">Feel free to reach out at anytime!</p>
+            <div class="bottom-row">
+                <div class="the-logos">
+                    <i class="fa-brands fa-linkedin" onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')"></i> <a href="mailto:eluong1@vols.utk.edu" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <p class="footer_3">Designed and built by Eric Luong <i class="fa-regular fa-copyright"></i> 2024</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
+

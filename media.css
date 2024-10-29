@@ -1,0 +1,74 @@
+@media screen and (max-width: 1200px) {
+    #desktop-nav{
+        display: none;
+    }
+
+    #hamburger-nav {
+        display: flex;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    #intro {
+        height: 70vh;
+        flex-wrap: wrap-reverse;
+        margin: 0;
+    }
+
+    .intro_1 {
+        font-size: 48px;
+        width: 350px;
+    }
+
+    .intro_2 {
+        text-align: center;
+        font-size: 24px;
+        width: 350px;
+    }
+
+    .profile-pic img {
+        width: 367px;
+        height: 332px;
+    }
+
+    .spotify-project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        margin: 0 ;
+    }
+
+    .image-wrapper img {
+        width: 100%; /* Adjust for smaller screens */
+        height: auto;
+    }
+
+    .spotify-tags {
+        margin-top: 1rem;
+    }
+
+    .tag {
+        display: inline-block;
+        padding: 0.5rem;
+        background-color: #e0e0e0;
+        margin: 0.5rem;
+        border-radius: 5px;
+        font-size: 0.9rem; /* Slightly smaller text on mobile */
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        margin: 0px;
+    }
+
+    .footer_3 {
+        margin: 0;
+    }
+}

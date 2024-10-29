@@ -1,0 +1,441 @@
+/* GENERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Albert Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: 0.3s ease-in-out;
+}
+
+section {
+    margin-left: 195px;
+    margin-right: 195px;
+}
+
+/* nav */
+
+nav, .nav-links {
+    display:flex;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 3rem;
+    margin-right: 355px;
+}
+
+nav {
+    color: black;
+    justify-content: space-around;
+    align-items: center;
+    height: 12.5vh;
+}
+
+.nav-links{
+    font-size: 1.5rem;
+    list-style: none;
+    gap: 2rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: black;
+    text-decoration: underline;
+    text-underline-offset: .75rem;
+    cursor:pointer
+}
+
+.nav-links .fa-brands {
+    font-size: 24px;
+}
+
+/* Hamburger Menu */
+
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 15px;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px); 
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0; 
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px); 
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* begin */
+
+.work-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.preview-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.preview-pic {
+    height: 417px;
+    width: 890px;
+    border-radius: 12px;
+}
+
+.tags {
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+/* overview */
+
+.overview-t {
+    margin-top: 40px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.overview-p {
+    margin-top: 25px;
+}
+
+/* context */
+
+.context-0 {
+    margin-top: 25px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.context-1 {
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+.context-2 {
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+/* problem/solution */
+
+#problem-solution {
+    margin-top: 25px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.problem, .solution {
+    border: 1px solid black;
+    width: 362px;
+    height: 278px;
+    padding: 5px;
+}
+
+.problem-1, .solution-1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-left: 20px;
+}
+
+.problem-list, .solution-list {
+    margin-top: 13px;
+    width: 77%;
+    font-size: 16px;
+    margin-left: 46px;
+    gap: 5px;
+}
+
+#problem-solution li {
+    margin-bottom: 7px;
+}
+
+/* Research */
+
+.research-0 {
+    margin-top: 25px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.research-1 {
+    margin-top: 25px;
+}
+
+.andrew-pic, .alan-pic, .kelly-pic {
+    width: 405px;
+    height: 131px;
+    margin-top: 25px;
+}
+
+.andrew-alan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.kelly {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.research-2 {
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+.affinity-diagram {
+    margin-top: 25px;
+    width: 862px;
+    height: 335px;
+}
+
+.affinity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.research-3 {
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+.user-persona {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.user {
+    width: 397.47px;
+    height: 500;
+    border: 1px solid black;
+}
+
+/* early ideation */
+
+.early-1 {
+    margin-top: 25px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.early-2, .early-3, .early-4, .early-5, .early-6 {
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+.image-1, .image-2, .image-3, .image-4, .image-5 {
+    width: 862px;
+    height: 238.08px;
+}
+
+.image-0 {
+    width: 600px;
+    height: 465px;
+}
+
+.slide-0,.slide-1, .slide-2, .slide-3, .slide-4, .slide-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.top-1, .top-2, .top-3 {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+/* final design */
+
+.letter-0 {
+    font-size: 32px;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+.final-1, .final-2, .final-3, .final-4, .final-5 {
+    width: 862px;
+    height: 238.08px;
+}
+
+.design-1, .design-2, .design-3, .design-4, .design-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.letter-1, .letter-2, .letter-3, .letter-4, .letter-5 {
+    margin-top: 25px;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+/* takeaways */
+
+.take-0 {
+    font-size: 32px;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+.take-1, .take-2, .take-3 {
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+/* footer */
+
+#footer {
+    background-color: rgb(122,134,152);
+    color: white;
+    margin-top: 88px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+
+.footer- {
+    color: white;
+    padding-top: 16px;
+}
+
+.footer_1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-left: 123px;
+    cursor: text;
+}
+
+.footer_2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: 123px;
+    cursor: text;
+}
+
+.the-logos {
+    margin-left: 123px;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+}
+
+.fa-brands {
+    font-size: 32px;
+}
+
+.fa-solid {
+    color: white;
+    font-size: 32px;
+}
+
+.footer_3 {
+    font-size: 20px;
+    cursor: text;
+    margin-left: 800px;
+}
+
+.bottom-row {
+    display: flex;
+    padding-bottom: 16px;
+}
+
+

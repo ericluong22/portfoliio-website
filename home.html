@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Luong</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <script src="https://kit.fontawesome.com/232c0321fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo"><a href="home.html">Eric Luong</a></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#Resume" onclick="window.open('./assets/Resume copy.pdf')">Resume</a></li>
+                <i class="fa-brands fa-linkedin"
+                alt="My LinkedIn Profle"
+                onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')">
+                </i>  
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Eric Luong</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#Home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#About" onclick="toggleMenu()">About</a></li>
+                <li><a href="#Resume" onclick="window.open('./assets/Resume copy.pdf')">Resume</a></li>
+                <li><a href="#LinkedIn" onclick="location.href='https://www.linkedin.com/in/ericluongg'">LinkedIn</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="intro">
+        <div class="intro">
+            <p class="intro_1">Hello, I am Eric!</p>
+            <p class="intro_2">I am an aspiring UI/UX Designer with a passion for crafting intuitive and creative designs. Welcome to my personal sandbox!</p>
+        </div>
+        <div class="profile-pic">
+            <img src="./assets/pic.png" alt="Profile Pic">
+        </div>
+    </section>
+    <section id="work">
+        <div class="spotify-project">
+            <div class="image-wrapper">
+                <a href="spotify.html" class="image-wrapper">
+                    <img src="./assets/spotify.cover.png" alt="Spotify Cover" onclick="spotify.html">
+                    <div class="project-title">
+                        <h2>Spotify Statistics Page Case Study</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="spotify-tags">
+                <span class="tag">UI Design</span>
+                <span class="tag">User Research</span>
+                <span class="tag">Desktop</span>
+            </div>
+        </div>
+    </section>    
+    <section id="footer">
+        <div class="footer">
+            <p class="footer_1">Eric Luong</p>
+            <p class="footer_2">Feel free to reach out at anytime!</p>
+            <div class="bottom-row">
+                <div class="the-logos">
+                    <i class="fa-brands fa-linkedin" onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')"></i> <a href="mailto:eluong1@vols.utk.edu" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <p class="footer_3">Designed and built by Eric Luong <i class="fa-regular fa-copyright"></i> 2024</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
