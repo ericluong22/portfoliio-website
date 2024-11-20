@@ -16,7 +16,7 @@
         align-items: center;
         width: 100%;
         justify-content: center;
-        padding-top: 55px;
+        padding-top: 25px;
     }
 
     .logo { 
@@ -30,7 +30,7 @@
 
     #intro {
         width: 90%;
-        height: 82vh;
+        height: 90vh;
         margin: 0 auto;
         justify-content: center;
         display: flex;
@@ -75,7 +75,7 @@
         justify-content: center;
         margin: 0 auto;
         padding-top: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
     
     .image-wrapper {
