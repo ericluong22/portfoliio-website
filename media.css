@@ -5,70 +5,145 @@
 
     #hamburger-nav {
         display: flex;
+        width: 100%;
     }
 }
 
 @media screen and (max-width:768px) {
 
+    #hamburger-nav {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        padding-top: 55px;
+    }
+
+    .logo { 
+        font-size: 36px;
+        margin-right: 130px;
+    }
+
+    .hamburger-menu {
+        margin-right: 20px;
+    }
+
     #intro {
-        height: 70vh;
-        flex-wrap: wrap-reverse;
-        margin: 0;
+        width: 90%;
+        height: 82vh;
+        margin: 0 auto;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column-reverse;
+        padding: 0px;
+
     }
 
     .intro_1 {
         font-size: 48px;
-        width: 350px;
     }
 
     .intro_2 {
         text-align: center;
         font-size: 24px;
-        width: 350px;
     }
 
     .profile-pic img {
-        width: 367px;
-        height: 332px;
+        max-width: 100%;
     }
 
+    #work {
+        margin-top: 30px;
+        flex-direction: column;
+        padding: 0px;
+    }
+    
     .spotify-project {
-        display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
-        padding: 1rem;
-        margin: 0 ;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-radius: 13px;
+        width: 80%;
+        padding: 0px;
+        position: relative;
+        padding: 0px;
+        padding-right: 0px;
+        justify-content: center;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
-
-    .image-wrapper img {
-        width: 100%; /* Adjust for smaller screens */
+    
+    .image-wrapper {
+        padding: 0px;
+        width: 100%;
+        border-radius: 15px;
+        overflow: hidden;
         height: auto;
+        background-color: transparent !important;
     }
-
+    
+    .spotify-project img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+    
     .spotify-tags {
-        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        background-color: white;
+        width: 100%;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin: 10px;
+    }
+    
+    .tag {
+        background-color: #d9d9d9;
+        border-radius: 15px;
+        padding: 5px 10px;
+        font-size: 14px;
+        color: #333;
     }
 
-    .tag {
-        display: inline-block;
-        padding: 0.5rem;
-        background-color: #e0e0e0;
-        margin: 0.5rem;
-        border-radius: 5px;
-        font-size: 0.9rem; /* Slightly smaller text on mobile */
+    .project-title {
+        display: none;
+    }
+
+    #footer {
+        width: 100%;
+        margin: 0 auto;
     }
 
     .footer {
+        margin-left: 10px;
+        justify-content: center;
+    }
+
+    .the-logos {
         display: flex;
+        gap: 15px;
+    }
+
+    .bottom-row {
+        display: inline-block;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 1rem;
-        margin: 0px;
+        width: 100%;
     }
 
     .footer_3 {
-        margin: 0;
+        margin-left: 0px;
+        display: block;
     }
+   
+
 }
