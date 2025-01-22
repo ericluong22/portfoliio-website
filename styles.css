@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Albert Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: 0.3s ease-in-out;
+    background-color: rgb(122,134,152);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* nav */
+
+nav {
+    background-color: white;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 70px;
+}
+
+nav a {
+    height: 100%;
+    padding: 10px 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.navlinks, .linked-in {
+    font-size: 20px;
+}
+
+.linked-in {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+}
+
+.navlinks:hover {
+    cursor:pointer;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.navlinks a {
+    position: relative; 
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.navlinks a::after {
+    content: ''; 
+    position: absolute;
+    bottom: 10px;
+    left: 18%;
+    width: 0;
+    height: 2px; 
+    background-color: black; 
+    transition: width 0.45s ease; 
+}
+
+.navlinks a:hover::after {
+    width: 65%;
+}
+
+.navlinks a:hover {
+    color: black; 
+}
+
+.logo {
+    font-size: 30px;
+}
+
+.mobilebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: white;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    transition: right 0.75s ease;
+}
+
+.mobilebar.active {
+    right: 0;
+}
+
+.mobilebar li {
+    width: 100%;
+}
+
+.mobilebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+#mobilebar-active {
+    display: none;
+}
+
+/* Intro Section */
+
+.intro {
+    max-width: 40%;
+}
+
+.intro_1 {
+    font-size: 48px;
+    color: white;
+}
+
+.intro_2 {
+    font-size: 24px;
+    color: white;
+}
+
+.profile-pic {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-pic img{
+    width: 100%;
+    max-width: 376px;
+    height: auto;
+    border-radius: 50%;
+}
+
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 50px;
+    width: 100%;
+    height: 76vh;
+}
+
+/* projects */
+
+.spotify-scf {
+    display: flex;
+    gap: 50px;
+}
+
+#work {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    gap: 30px;
+    background-color: white;
+}
+
+.spotify-project, .scf-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 13px;
+    width: 100%; 
+    max-width: 580px; 
+    padding: 20px;
+    margin: 0 auto; 
+}
+
+.spotify-wrapper, .scf-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    height: auto;
+}
+
+.spotify-project img, .scf-project img {
+    width: 100%; 
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.spotify-tags, .scf-tags {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px; 
+    background-color: white;
+    width: 100%; 
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.tag {
+    text-align: left;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #333;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+}
+
+.project-title {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 100%; 
+    color: #fff;
+    opacity: 0;
+    text-align: center;
+    padding: 10px 0;
+    transition: opacity 0.3s ease;
+    font-size: 1.2rem; 
+    line-height: 1.5; 
+    pointer-events: none;
+}
+
+.spotify-wrapper:hover .project-title, .scf-wrapper:hover .project-title {
+    opacity: 1;
+}
+
+.spotify-wrapper:hover img, .scf-wrapper:hover img {
+    filter: brightness(60%);
+    transition: filter 0.3s ease;
+}
+
+.spotify-scf p{
+    font-size: 28px;
+    font-weight: 500;
+}
+
+/* Footer */
+
+.f-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-links {
+    margin-top: 35px;
+    display: flex;
+    gap: 27px;
+    font-size: 20px;
+    color: white;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.f-links li a{
+    list-style: none;
+    list-style-type: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    color: white;
+}
+
+.copy {
+    font-size: 17px;
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+

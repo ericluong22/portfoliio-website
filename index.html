@@ -4,79 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eric Luong</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="media.css">
+    <link rel="icon" type="image/png" href="assets/pic.png">
     <script src="https://kit.fontawesome.com/232c0321fa.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo"><a href="index.html">Eric Luong</a></div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#Resume" onclick="window.open('./assets/Resume.pdf')">Resume</a></li>
-                <i class="fa-brands fa-linkedin"
-                alt="My LinkedIn Profle"
-                onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')">
-                </i>  
-            </ul>
+   <nav>
+    <ul class="mobilebar">
+        <div class="close-icon">
+            <li onclick=hideMobilebar()><a href="#closeicon"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
         </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Eric Luong</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#Home" onclick="toggleMenu()">Home</a></li>
-                <li><a href="#About" onclick="toggleMenu()">About</a></li>
-                <li><a href="#Resume" onclick="window.open('./assets/Resume.pdf')">Resume</a></li>
-                <li><a href="#LinkedIn" onclick="location.href='https://www.linkedin.com/in/ericluongg'">LinkedIn</a></li>
-            </div>
+        </label>
+        <li class="nav-links"><a href="index.html">Home</a></li>
+        <li class="nav-links"><a href="about.html">About</a></li>
+        <li class="nav-links"><a href="#Resume" onclick="window.open('./assets/Resume!!!.pdf')">Resume</a></li>
+        <li class="nav-links"><a href="#Linkedin" onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')">LinkedIn</a></li>
+    </ul>
+    <ul class="desktopbar">
+        <li class="logo"><a href="index.html">Eric Luong</a></li>
+        <li class="navlinks"><a href="index.html">Home</a></li>
+        <li class="navlinks"><a href="about.html">About</a></li>
+        <li class="navlinks"><a href="#Resume" onclick="window.open('./assets/Resume!!!.pdf')">Resume</a></li>
+        <div class="linked-in">
+            <i class="fa-brands fa-linkedin"
+            alt="My LinkedIn Profle"
+            onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')">
+            </i>  
         </div>
-    </nav>
-    <section id="intro">
-        <div class="intro">
-            <p class="intro_1">Hello, I am Eric!</p>
-            <p class="intro_2">I am an aspiring UI/UX Designer with a passion for crafting intuitive and creative designs. Welcome to my personal sandbox!</p>
-        </div>
-        <div class="profile-pic">
-            <img src="./assets/pic.png" alt="Profile Pic">
-        </div>
+        <li class="menu-button" onclick=showMobilebar()><a href="#menuicon"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+   </nav>
+   <section id="intro">
+    <div class="intro">
+        <p class="intro_1">Hello, I am Eric!</p>
+        <p class="intro_2">I am an aspiring UI/UX Designer with a passion for crafting intuitive and creative designs. Welcome to my personal sandbox!</p>
+    </div>
+    <div class="profile-pic">
+        <img src="./assets/pic.png" alt="Profile Pic">
+    </div>
     </section>
     <section id="work">
-        <div class="spotify-project">
-            <div class="image-wrapper">
-                <a href="spotify.html" class="image-wrapper">
-                    <img src="./assets/spotify.cover.png" alt="Spotify Cover" onclick="spotify.html">
-                    <div class="project-title">
-                        <h2>Spotify Statistics Page Case Study</h2>
-                    </div>
-                </a>
-            </div>
-            <div class="spotify-tags">
-                <span class="tag">UI Design</span>
-                <span class="tag">User Research</span>
-                <span class="tag">Desktop</span>
-            </div>
-        </div>
-    </section>    
-    <section id="footer">
-        <div class="footer">
-            <p class="footer_1">Eric Luong</p>
-            <p class="footer_2">Feel free to reach out at anytime!</p>
-            <div class="bottom-row">
-                <div class="the-logos">
-                    <i class="fa-brands fa-linkedin" onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')"></i> <a href="mailto:eluong1@vols.utk.edu" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        <div class="spotify-scf">
+            <div class="spotify-project">
+                <div class="spotify-wrapper">
+                    <a href="spotify.html">
+                        <img src="./assets/spotify.cover.png" alt="Spotify Cover" onclick="spotify.html">
+                        <div class="project-title">
+                            <p>Spotify Statistics Page Case Study</p>
+                        </div>
+                    </a>
                 </div>
-                <p class="footer_3">Designed and built by Eric Luong <i class="fa-regular fa-copyright"></i> 2024</p>
+                <div class="spotify-tags">
+                    <span class="tag">UI Design</span>
+                    <span class="tag">User Research</span>
+                    <span class="tag">Desktop</span>
+                </div>
+            </div>
+            <div class="scf-project">
+                <div class="scf-wrapper">
+                    <a href="scf.html">
+                        <img src="./assets/scf.png" alt="SCF Cover" onclick="scf.html">
+                        <div class="project-title">
+                            <p>St. Christpher Truckers Relief Fund</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="scf-tags">
+                    <span class="tag">Non-profit</span>
+                    <span class="tag">UI/UX Design</span>
+                    <span class="tag">Mobile/Desktop</span>
+                </div>
             </div>
         </div>
     </section>
-    <script src="script.js"></script>
+    <footer>
+        <div class="f-section">
+            <div class="f-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#Resume" onclick="window.open('./assets/Resume!!!.pdf')">Resume</a></li>
+                <li><a href="#LinkedIn" onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')">LinkedIn</a></li>
+                <li><a href="mailto:eluong1@vols.utk.edu" target="_blank">Email</a></li>
+            </div>
+            <div class="copy">
+                <p>Designed and built by Eric Luong <i class="fa-regular fa-copyright"></i> 2024</p>
+            </div>
+        </div>
+    </footer>    
+   <script>
+        function showMobilebar() {
+            const mobilebar = document.querySelector('.mobilebar');
+            mobilebar.classList.add('active');
+        }
+
+        function hideMobilebar() {
+            const mobilebar = document.querySelector('.mobilebar');
+            mobilebar.classList.remove('active');
+        }
+   </script>
 </body>
 </html>

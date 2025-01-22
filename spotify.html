@@ -6,51 +6,48 @@
     <title>Eric Luong</title>
     <link rel="stylesheet" href="spotify.css">
     <link rel="stylesheet" href="media.css">
+    <link rel="icon" type="image/png" href="assets/pic.png">
     <script src="https://kit.fontawesome.com/232c0321fa.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo"><a href="index.html">Eric Luong</a></div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#Resume" onclick="window.open('./assets/Resume.pdf')">Resume</a></li>
-                <i class="fa-brands fa-linkedin"
-                alt="My LinkedIn Profle"
-                onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')">
-                </i>  
-            </ul>
+   <nav>
+    <ul class="mobilebar">
+        <div class="close-icon">
+            <li onclick=hideMobilebar()><a href="#closeicon"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
         </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Eric Luong</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#Home" onclick="toggleMenu()">Home</a></li>
-                <li><a href="#About" onclick="toggleMenu()">About</a></li>
-                <li><a href="#Resume" onclick="window.open('./assets/Resume.pdf')">Resume</a></li>
-                <li><a href="#LinkedIn" onclick="location.href='https://www.linkedin.com/in/ericluongg'">LinkedIn</a></li>
-            </div>
+        </label>
+        <li class="nav-links"><a href="index.html">Home</a></li>
+        <li class="nav-links"><a href="about.html">About</a></li>
+        <li class="nav-links"><a href="#Resume" onclick="window.open('./assets/Resume!!!.pdf')">Resume</a></li>
+        <li class="nav-links"><a href="#Linkedin" onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')">LinkedIn</a></li>
+    </ul>
+    <ul class="desktopbar">
+        <li class="logo"><a href="index.html">Eric Luong</a></li>
+        <li class="navlinks"><a href="index.html">Home</a></li>
+        <li class="navlinks"><a href="about.html">About</a></li>
+        <li class="navlinks"><a href="#Resume" onclick="window.open('./assets/Resume!!!.pdf')">Resume</a></li>
+        <div class="linked-in">
+            <i class="fa-brands fa-linkedin"
+            alt="My LinkedIn Profle"
+            onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')">
+            </i>  
         </div>
-    </nav>
-    <section id="begin">
+        <li class="menu-button" onclick=showMobilebar()><a href="#menuicon"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+   </nav>
+   <section id="begin">
         <div class="intro">
             <p class="work-title">Spotify Statistics Page</p>
-            <div class="preview-container">
-                <img  class="preview-pic" src="./assets/preview-pic-spotify.png" alt="spotify preview">
-            </div>
-            <div class="tags">
-                <p class="role"><span style="font-weight: 600;">Role:</span> Product Designer</p>
-                <p class="timeline"><span style="font-weight: 600;">Timeline:</span> July 2024</p>
-                <p class="duration"><span style="font-weight: 600;">Duration:</span> 4 Weeks</p>
-            </div>
         </div>
+        <div class="preview-container">
+            <img src="./assets/preview-pic-spotify.png" alt="spotify preview">
+        </div>
+        <div class="tags">
+            <p class="role"><span style="font-weight: 600;">Role:</span> Product Designer</p>
+            <p class="timeline"><span style="font-weight: 600;">Timeline:</span> July 2024</p>
+            <p class="duration"><span style="font-weight: 600;">Duration:</span> 4 Weeks</p>
+        </div>
+    </div>
     </section>
     <section id="overview">
         <div class="overview">
@@ -88,8 +85,10 @@
         </div>
     </section>
     <section id="research">
-        <p class="research-0">Research</p>
-        <p class="research-1">I moved on to conducting user interviews for my solution. I interviewed 3 people asking them about their opinions on Spotify and what they would like to see in a statistics page. </p>
+        <div class="starter">
+            <p class="research-0">Research</p>
+            <p class="research-1">I moved on to conducting user interviews for my solution. I interviewed 3 people asking them about their opinions on Spotify and what they would like to see in a statistics page. </p>
+        </div>
         <div class="andrew-alan">
             <img class="andrew-pic" src="./assets/andrew-interiew.png" alt="andrew pic">
             <img class="alan-pic" src="./assets/alan-interview.png" alt="alan pic">
@@ -164,16 +163,30 @@
         <p class="take-2">I think that through this case study I have become so much more familiar with Figma and how to use it. I learned how to format a case study and realized that every part of the process has a meaning to it and they all bounce off of each other to create a story.</p>
         <p class="take-3">The things I would do differently would be putting more effort into wireframing and sketching before worrying about the final designs and what the colors should be on the background of the statistics page or if I should make this text bold or not. The most important and fundamental parts of a design is having a good user friendly interface balanced with aesthetics.</p>
     </section>
-    <section id="footer">
-        <div class="footer-">
-            <p class="footer_1">Eric Luong</p>
-            <p class="footer_2">Feel free to reach out at anytime!</p>
-            <div class="bottom-row">
-                <div class="the-logos">
-                    <i class="fa-brands fa-linkedin" onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')"></i> <a href="mailto:eluong1@vols.utk.edu" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-                </div>
-                <p class="footer_3">Designed and built by Eric Luong <i class="fa-regular fa-copyright"></i> 2024</p>
+    <footer>
+        <div class="f-section">
+            <div class="f-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#Resume" onclick="window.open('./assets/Resume!!!.pdf')">Resume</a></li>
+                <li><a href="#LinkedIn" onclick="window.open('https://www.linkedin.com/in/ericluongg','_blank')">LinkedIn</a></li>
+                <li><a href="mailto:eluong1@vols.utk.edu" target="_blank">Email</a></li>
+            </div>
+            <div class="copy">
+                <p>Designed and built by Eric Luong <i class="fa-regular fa-copyright"></i> 2024</p>
             </div>
         </div>
-    </section>
+    </footer>    
+    <script>
+    function showMobilebar() {
+        const mobilebar = document.querySelector('.mobilebar');
+        mobilebar.classList.add('active');
+    }
+
+    function hideMobilebar() {
+        const mobilebar = document.querySelector('.mobilebar');
+        mobilebar.classList.remove('active');
+    }
+    </script>
 </body>
+</html>
