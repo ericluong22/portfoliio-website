@@ -126,6 +126,12 @@
     }
 }
 
+@media screen and (max-width: 400px) {
+    .solution {
+        height: 500px;
+    }
+}
+
 @media screen and (max-width: 375px) {
     .solution {
         height: 500px;
