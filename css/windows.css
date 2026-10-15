@@ -1,0 +1,161 @@
+/* Project windows: overlay, shell layouts and the design's shared classes.
+   Body content styles are generated into windows.gen.css.
+   Framed window at >=1200px (scaled to fit by js/windows.js), full-screen sheet below. */
+@layer base {
+
+html { scrollbar-gutter: stable; }
+html.ov-open { overflow: hidden; }
+
+/* ---------- Overlay ---------- */
+.ov { position: fixed; inset: 0; z-index: 200; visibility: hidden; pointer-events: none; }
+.ov.open { visibility: visible; pointer-events: auto; }
+.ov .ovbg { position: absolute; inset: 0; background: rgba(24,22,18,.58); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); opacity: 0; transition: opacity .28s ease; }
+.ov.open .ovbg { opacity: 1; }
+.ov.closing .ovbg { opacity: 0; }
+.ovw { position: absolute; inset: 0; pointer-events: none; }
+.ovw > * { pointer-events: auto; }
+.ov.open .ovw { animation: ov-in .35s ease both; }
+.ov.closing .ovw { animation: ov-out .26s ease both; }
+@keyframes ov-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes ov-out { 0% { opacity: 1; } 100% { opacity: 0; } }
+
+.ov button:focus-visible, .ov a:focus-visible { outline: 2px solid #000; outline-offset: 3px; }
+
+/* ---------- Shell: framed window (desktop) ---------- */
+.ov .side { position: absolute; top: calc(50% - 28px); z-index: 2; }
+.ov .side.prev { left: clamp(16px, 2.7778vw, 40px); }
+.ov .side.next { right: clamp(16px, 2.7778vw, 40px); }
+
+.win {
+  position: absolute; left: 50%; top: 50%; width: 1180px; height: 800px; box-sizing: border-box; padding: 26px;
+  background: #FFFCF4; border: 1.5px solid #000; box-shadow: 14px 14px 0 #000;
+  transform: translate(-50%, -50%) rotate(-0.5deg) scale(var(--ws, 1));
+  display: grid; grid-template-columns: 232px minmax(0, 1fr); grid-template-rows: auto 1fr; column-gap: 26px; row-gap: 18px;
+  font-family: "Courier New", Courier, monospace;
+}
+.win > .tape { position: absolute; height: 36px; background: rgba(0,0,0,.12); border: 1.5px dashed #000; }
+.win > .wt1 { left: 60px; top: -18px; width: 130px; transform: rotate(-4deg); }
+.win > .wt2 { right: 80px; top: -16px; width: 110px; transform: rotate(3deg); }
+
+.wbar { grid-column: 1; grid-row: 1; display: flex; }
+.wnav { display: none; }
+.whead { grid-column: 1; grid-row: 2; align-self: start; display: flex; flex-direction: column; gap: 18px; }
+.wbody {
+  grid-column: 2; grid-row: 1 / 3; display: flex; flex-direction: column; gap: 28px;
+  min-width: 0; min-height: 0; overflow-y: auto; padding: 0 10px 26px 0;
+  scrollbar-width: thin; scrollbar-color: #000 transparent;
+}
+.wbody:focus-visible { outline: 2px solid #000; outline-offset: 3px; }
+
+.wtitle { margin: 0; font-size: 24px; line-height: 1.15; font-weight: 700; letter-spacing: -0.5px; }
+.dhead { margin: 0 0 6px 0; padding-bottom: 10px; border-bottom: 1.5px dashed #000; font-size: 18px; font-weight: 700; }
+.dgrid, .dcell { display: contents; }
+.dval { margin: 0 0 8px 0; font-size: 16px; font-weight: 700; line-height: 1.5; }
+.dcell:first-child .dval { line-height: normal; }
+.dcell:last-child .dval { margin: 0; }
+
+/* ---------- Shell: full-screen sheet (tablet and phone) ---------- */
+@media (max-width: 1199px) {
+  .ov .side, .win > .tape { display: none; }
+  .win {
+    inset: 0; left: 0; top: 0; width: auto; height: auto; padding: 0; border: 0; box-shadow: none; transform: none;
+    display: block; overflow-y: auto; overflow-x: hidden; background: #FAF3E1;
+    scrollbar-width: thin; scrollbar-color: #000 transparent;
+  }
+  .wbar {
+    position: sticky; top: 0; z-index: 20; background: #FAF3E1; border-bottom: 1.5px solid #000;
+    padding: 12px 32px; justify-content: space-between; align-items: center;
+  }
+  .wnav { display: flex; gap: 14px; }
+  .wnav .round { width: 44px; height: 44px; box-shadow: 3px 3px 0 #000; }
+  .whead { padding: 24px 32px 0; }
+  .wbody { overflow: visible; padding: 32px; gap: 32px; }
+  .wtitle { font-size: 30px; }
+  .dgrid { display: grid; grid-template-columns: 1fr 1fr 1.4fr; column-gap: 20px; }
+  .dcell { display: block; }
+  .dval, .dcell:first-child .dval, .dcell:last-child .dval { margin: 0; line-height: 1.5; }
+}
+@media (max-width: 600px) {
+  .wbar { padding: 12px 16px; }
+  .whead { padding: 24px 16px 0; gap: 16px; }
+  .wbody { padding: 28px 16px 32px; gap: 28px; }
+  .wtitle { font-size: 26px; }
+  .dgrid, .dcell { display: contents; }
+  .dval { margin: 0 0 8px 0; }
+  .dcell:first-child .dval { line-height: normal; }
+  .dcell:last-child .dval { margin: 0; }
+}
+
+/* ---------- Shared classes from the design ---------- */
+.ov button { font-family: inherit; cursor: pointer; color: #000; }
+.ph { box-sizing: border-box; background: repeating-linear-gradient(45deg,#F2E8CF 0 14px,#EADFC2 14px 28px); border: 1.5px solid #000; display: flex; align-items: center; justify-content: center; }
+.ph span { font-size: 14px; padding: 4px 10px; background: #FFFCF4; border: 1.5px solid #000; }
+.ov .tape { position: absolute; height: 36px; background: rgba(0,0,0,.12); border: 1.5px dashed #000; }
+.round { width: 56px; height: 56px; border-radius: 50%; background: #FFFCF4; border: 1.5px solid #000; display: flex; align-items: center; justify-content: center; box-shadow: 4px 4px 0 #000; transition: transform .15s, box-shadow .15s; }
+.round:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 #000; }
+.close { display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #FFFCF4; border: 1.5px solid #000; font-size: 15px; font-weight: 700; box-shadow: 3px 3px 0 #000; transition: transform .15s; }
+.close:hover { transform: translate(-1px,-1px); }
+.label { font-size: 14px; margin: 0 0 4px 0; }
+.hide { display: none !important; }
+.pthumb { opacity: .55; transition: opacity .15s, transform .15s; }
+.pthumb:hover { opacity: .85; transform: translateY(-2px); }
+.pthumb.on { opacity: 1; }
+.vbtn { font-family: inherit; font-size: 14px; font-weight: 700; background: #FFFCF4; border: 1.5px solid #000; padding: 6px 12px; box-shadow: 3px 3px 0 #000; cursor: pointer; transition: transform .15s; }
+.vbtn:hover { transform: translate(-1px,-1px); }
+.mail { color: #000; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px; }
+.mail:hover { background: #000; color: #FFFCF4; text-decoration: none; }
+.dbox { border: 1.5px dashed #000; padding: 16px 16px; display: flex; flex-direction: column; gap: 8px; }
+.txtbtn { background: none; border: none; font-size: 16px; padding: 10px 0; }
+.txtbtn:hover { text-decoration: underline; text-underline-offset: 5px; }
+.plist { background: none; border: none; color: #FAF3E1; text-align: left; font-size: 22px; padding: 10px 0; display: flex; gap: 16px; align-items: baseline; }
+.plist:hover { text-decoration: underline; text-underline-offset: 6px; }
+.plist:focus-visible { outline-color: #FAF3E1; }
+
+/* Spotify prototype */
+.spx { font-family: Figtree, "Helvetica Neue", Arial, sans-serif; color: #fff; }
+.spx * { box-sizing: border-box; }
+.spx button { color: inherit; font-family: inherit; cursor: pointer; }
+.spx a { color: inherit; text-decoration: none; }
+.ov .spx button:focus-visible, .ov .spx a:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.spx .nv { display: flex; align-items: center; gap: 18px; padding: 10px 0; font-weight: 700; font-size: 15px; color: #A7A7A7; transition: color .15s; }
+.spx .nv:hover { color: #fff; }
+.spx .chip { font-size: 13px; padding: 6px 12px; border-radius: 999px; background: #232323; color: #fff; }
+.spx .seg { border: 0; background: transparent; color: #A7A7A7; font-size: 14px; font-weight: 700; padding: 8px 16px; border-radius: 999px; transition: background .15s, color .15s; }
+.spx .seg:hover { color: #fff; }
+.spx .seg.on { background: #fff; color: #000; }
+.spx .ib { width: 28px; height: 28px; border-radius: 50%; border: 0; background: #242424; display: inline-flex; align-items: center; justify-content: center; transition: background .15s; }
+.spx .ib:hover { background: #333; }
+.spx .ib.dis { opacity: .3; pointer-events: none; }
+.spx .sa { font-size: 14px; font-weight: 700; color: #A7A7A7; transition: color .15s; }
+.spx .sa:hover { color: #fff; text-decoration: underline; }
+.spx .row { transition: background .15s; }
+.spx .row:hover { background: #2A2A2A; }
+.spx .tile { transition: transform .15s; }
+.spx .tile:hover { transform: translateY(-3px); }
+.spx .th { font-size: 13px; color: #A7A7A7; font-weight: 500; }
+.spscroll { scrollbar-color: #555 #121212; }
+.ochip { font-family: inherit; font-size: 15px; background: #FFFCF4; border: 1.5px solid #000; padding: 7px 14px; box-shadow: 3px 3px 0 #000; transition: transform .15s; }
+.ochip:hover { transform: translate(-1px,-1px); }
+.ochip.on { background: #000; color: #FFFCF4; }
+.callbtn { width: 34px; height: 34px; border-radius: 50%; border: 0; background: #3A3A3A; display: inline-flex; align-items: center; justify-content: center; transition: background .15s; }
+.callbtn:hover { background: #555; }
+.cdot { width: 8px; height: 8px; border-radius: 50%; background: #666; }
+.cdot.on { background: #fff; }
+.spx .shbtn { display: inline-flex; align-items: center; gap: 10px; border: 0; border-radius: 999px; background: #1ED760; color: #000; font-family: inherit; font-size: 16px; font-weight: 700; padding: 14px 26px; transition: transform .15s, background .15s; white-space: nowrap; }
+.spx .shbtn:hover { transform: scale(1.04); background: #3BE477; }
+.spx .shopt { display: flex; align-items: center; gap: 12px; border: 1px solid #333; border-radius: 10px; background: #242424; color: #fff; font-family: inherit; font-size: 15px; font-weight: 500; padding: 12px 14px; text-align: left; transition: background .15s; }
+.spx .shopt:hover { background: #2E2E2E; }
+.spx .shic { width: 36px; height: 36px; border-radius: 50%; background: #3A3A3A; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.spx .bk { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; border: 0; background: #242424; color: #fff; font-family: inherit; font-size: 14px; font-weight: 700; padding: 8px 14px 8px 10px; border-radius: 999px; transition: background .15s; }
+.spx .bk:hover { background: #333; }
+.layer { position: absolute; inset: 0; overflow-y: auto; overflow-x: hidden; scrollbar-width: thin; scrollbar-color: #555 #121212; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ov .ovbg { transition: none; }
+  .ov.open .ovw, .ov.closing .ovw { animation: none; }
+  .round, .close, .pthumb, .ochip, .callbtn { transition: none; }
+  .spx .nv, .spx .seg, .spx .ib, .spx .sa, .spx .row, .spx .tile, .spx .shbtn, .spx .shopt { transition: none; }
+  .spx .tile:hover, .spx .shbtn:hover { transform: none; }
+}
+
+}
